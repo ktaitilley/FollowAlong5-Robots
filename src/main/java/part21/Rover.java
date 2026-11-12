@@ -17,23 +17,33 @@ import mbot.*;
 
 public class Rover {
     private String name;
+    //creates a private String variable
     private Chassis base;
+    //creates a private chassis vaariable
     private Ultrasonic eyes;
+    // creates a private ultrasonic variable
     public Rover(String name) {
         this.name = name;
+        //assigns name to name
         this.base = new Chassis();
+        //assigns the chassis variable to a new chassis
         this.eyes = new Ultrasonic(base);
+        // assigns ultrasonic eyes variable to new ultrasonic
     }
     public boolean somethingAhead(double cm) {
         return eyes.distance() < cm;
+        // returns eyes once it calls the method
     }
     public void driveUntilBlocked() {
         while (!somethingAhead(20)) {
+            //loops while something is 20 cm ahead
             base.straight(5);
+            //base calls the method
         }
     }
     public String toString() {
         return name + " the rover";
+        //returns the statement
     }
 
 }

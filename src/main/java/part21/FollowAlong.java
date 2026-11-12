@@ -14,9 +14,13 @@ import mbot.*;
 public class FollowAlong {
     public static void main(String[] args) {
         Rover scout = new Rover("Scout");
+        //creates a new rover
         System.out.println(scout + " is ready");
+        //prints the statement
         scout.driveUntilBlocked();
+        //calls the method on the scout rover
         System.out.println(scout + " stopped. Something is less than 20 cm ahead.");
+        //prints the statement
     }
 
 }
