@@ -22,11 +22,13 @@ public class Rover {
     //creates a private chassis vaariable
     private Ultrasonic eyes;
     // creates a private ultrasonic variable
+    private LineSensor floor;
     public Rover(String name) {
         this.name = name;
         //assigns name to name
         this.base = new Chassis();
         //assigns the chassis variable to a new chassis
+        this.floor = new LineSensor(base);
         this.eyes = new Ultrasonic(base);
         // assigns ultrasonic eyes variable to new ultrasonic
     }
@@ -44,6 +46,16 @@ public class Rover {
     public String toString() {
         return name + " the rover";
         //returns the statement
+    }
+
+    public void driveToTape() {
+        while (!floor.seesTape()) {
+            base.straight(2);
+        }
+    }
+
+    public void forward(double cm) {
+        base.straight(cm);
     }
 
 }
