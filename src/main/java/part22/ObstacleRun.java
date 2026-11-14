@@ -14,11 +14,11 @@ import mbot.*;
 public class ObstacleRun {
     public static void main(String[] args) {
         Rover rover = new Rover("Dash");
-        //
+        //creates a new rover
         rover.reachGoal();
-        //
+        //call the method for rover
         System.out.println(rover + " reached the goal");
-        //
+        //prints the statement
     }
 
 }
