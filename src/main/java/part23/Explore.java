@@ -14,21 +14,21 @@ import mbot.*;
 public class Explore {
     public static void main(String[] args) {
         Scout scout = new Scout("Pathfinder");
-        //
+        //creates a new scout
         for (int leg = 1; leg <= 3; leg++) {
-            //
+            //creates a loop
             int moves = scout.driveUntilBlocked();
-            //
+            //creates a int variable and assigns it to scout.driveuntilblocked
             System.out.println("Leg " + leg + ": " + moves + " moves");
-            //
+            //prints the statement
             if (leg < 3) {
-                //
+                //if conditon are met
                 scout.turnTowardOpenSide();
-                //
+                //scout will turn
             }
         }
         System.out.println(scout + " reached the goal");
-        //
+        //print the statement
     }
 
 }
