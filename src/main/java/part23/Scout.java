@@ -21,7 +21,7 @@ public class Scout extends MBot2{
     //creates a private scanner variable
     public Scout(String name) {
         super();
-        //
+        //adds the default constructor
         this.name = name;
         //assigns name to name
         this.scanner = new Scanner(this);
@@ -43,7 +43,7 @@ public class Scout extends MBot2{
 
     public int openestIndex() {
         double[] d = scanner.scan();
-        //
+        // creates a array with object types of double named d and assigns it the scanners scan.
         int best = 0;
         //creates a int variable and assigns it 0
         for (int i = 1; i < d.length; i++) {
