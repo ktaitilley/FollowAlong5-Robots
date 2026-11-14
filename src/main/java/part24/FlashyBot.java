@@ -10,6 +10,7 @@ import mbot.*;
 // SECTION B — COMMENTS: put a // comment ABOVE every line of code, in YOUR OWN WORDS.
 
 public class FlashyBot extends MBot2 {
+    private int turns;
     public FlashyBot() {
         super();
         //
@@ -24,6 +25,7 @@ public class FlashyBot extends MBot2 {
         //
         turnLedOff(1);
         //
+        turns++;
     }
     @Override
     public void turnRight(double degrees) {
@@ -35,6 +37,7 @@ public class FlashyBot extends MBot2 {
         //
         turnLedOff(1);
         //
+        turns++;
     }
     @Override
     //
@@ -46,6 +49,10 @@ public class FlashyBot extends MBot2 {
             turnLeft(90);
             //
         }
+    }
+
+    public String toString() {
+        return "FlashyBot (" + turns + " turns)";
     }
 
 }

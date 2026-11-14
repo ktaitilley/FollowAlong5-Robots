@@ -12,11 +12,11 @@ import mbot.*;
 @MBotLab(world = "wall-ahead")
 public class Mission {
     public static void mission(MBot2 bot) {
-        System.out.println("Mission start");
+        System.out.println("Mission start: "+bot);
         //
         bot.run();
         //
-        System.out.println("Mission done");
+        System.out.println("Mission done: "+bot);
         //
     }
     public static void main(String[] args) {

@@ -14,6 +14,7 @@ import mbot.*;
 //    saying in YOUR OWN WORDS what that line does.
 
 public class CarefulBot extends MBot2 {
+    private int refused;
     public CarefulBot() {
         super();
         //
@@ -29,6 +30,7 @@ public class CarefulBot extends MBot2 {
             //
             System.out.println("CarefulBot: not driving " + cm + " cm, too close");
             //
+            refused++;
         }
     }
     @Override
@@ -40,4 +42,8 @@ public class CarefulBot extends MBot2 {
         }
     }
 
+    @Override
+    public String toString() {
+        return "CarefulBot (refused " + refused + " moves)";
+    }
 }
